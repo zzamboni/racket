@@ -1,5 +1,5 @@
 #lang br/quicklang
-
+ 
 (define-macro (bf-module-begin PARSE-TREE)
   #'(#%module-begin
      PARSE-TREE))
@@ -10,8 +10,8 @@
 (provide bf-program)
 
 (define-macro (bf-loop "[" OP-OR-LOOP-ARG ... "]")
-  #'(until (zero? (current-byte)) ; function coming soon
-           OP-OR-LOOP-ARG ...))
+  #'(until (zero? (current-byte))
+      OP-OR-LOOP-ARG ...))
 (provide bf-loop)
 
 (define-macro-cases bf-op
